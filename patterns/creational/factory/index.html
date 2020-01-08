@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+    <title>The Factory Pattern</title>
+</head>
+
+<body>
+    <!--Please note that not the best practices have been used on this HTML file as our focus is Javascript-->
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Adicionar veículos</h1>
+            <p>Preencha os campos e adicione novos veículos!</p>
+            <div class="row">
+                <div class="col-sm-2"><input type="text" placeholder="Modelo" class="form-control" /></div>
+                <div class="col-sm-2"><input type="text" placeholder="Marca" class="form-control" /></div>
+                <div class="col-sm-2"><input type="number" placeholder="Preço" class="form-control" /></div>
+                <div class="col-sm-2"><input type="number" placeholder="Potência" class="form-control" /></div>
+                <div class="col-sm-2">
+                    <select class="form-control" id="sel1">
+                        <option value="car">Carro</option>
+                        <option value="bike">Moto</option>
+                        <option value="other">Outro</option>
+                    </select></div>
+                <div class="col-sm-2"><button type="button" class="btn btn-success"
+                        onclick="registerVehicle()">Adicionar</button></div>
+            </div>
+        </div>
+        <div>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Modelo</th>
+                        <th>Marca</th>
+                        <th>Preço</th>
+                        <th>Potência</th>
+                        <th>Tipo</th>
+                    </tr>
+                </thead>
+                <tbody id="root">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <footer>Criado por Lucas Mendonça Dias, 2020. Visite meu <a href="https://br.linkedin.com/in/lucas-mendon%C3%A7a-dias-6b7632130">LinkedIn</a> e meu <a href="https://github.com/lucasmndca">GitHub</a></footer>
+    <script src="index.js"></script>
+</body>
+
+</html>
