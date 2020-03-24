@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>MH Monster List</title>
+        <link rel="stylesheet" type="text/css" href="./index.css">
+    </head>
+    <body onload="openConnection()">
+        <main>
+            <div class="content">
+                <h1>Lista de monstros</h1>
+                <a href="./add.html">Adicionar</a>
+                <select 
+                onchange="handleFilter()"
+                id="filter"
+                >
+                    <option value="default">Ordem...</option>
+                    <option value="nomeCres">Nome crescente</option>
+                    <option value="nomeDec">Nome decrescente</option>
+                    <option value="ataqueCres">Ataque crescente</option>
+                    <option value="ataqueDec">Ataque descrescente</option>
+                    <option value="defesaCres">Defesa crescente</option>
+                    <option value="defesaDec">Defesa descrescente</option>
+                </select>
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 25%">Nome</th>
+                            <th>Tipo</th>
+                            <th>Nível</th>
+                            <th>Ataque</th>
+                            <th>Defesa</th>
+                            <th>Elemento</th>
+                            <th>Alimento</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+                    </tbody>
+                </table>
+            </div>
+        </main>
+        <script src="./scripts/sortMonsters.js"></script>
+        <script src="./scripts/service.js"></script>
+        <script src="./scripts/connection.js"></script>
+        <script src="./scripts/populateResponse.js"></script>
+    </body>
+    </html>
