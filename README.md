@@ -37,6 +37,7 @@ This was such an excellent exercise to learn more about javascript's fetch api m
 A simple project which has a few interesting user stories. Should be a countdown timer with some extra features.
 
 ### Stack
+- [Angular.js 1.8](https://angularjs.org/)
 - [Branch naming convention](https://codingsight.com/git-branching-naming-convention-best-practices/)
 - [Typescript](https://www.typescriptlang.org/)
 - [HTML 5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
