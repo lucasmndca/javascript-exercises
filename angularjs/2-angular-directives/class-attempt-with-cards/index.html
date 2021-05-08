@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en" ng-app="firstAngularApp">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>AngularJs App</title>
+    <meta name="description" content="WalkThroughCode angularjs app">
+    <meta name="author" content="Lucas Mendonça Dias">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+
+<body ng-controller="mainCtrl as vm">
+
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <h1 style="padding: 0px 10px">Object List</h1>
+            <div clas="row">
+                <div class="col-md-12">
+                    <input type="radio" id="fruit" value="fruit" ng-model="vm.addType" checked><label for="fruit">Add a new fruit</label>
+                    <input type="radio" id="drink" value="drink" ng-model="vm.addType"><label for="drink">Add a new drink</label>
+                    <div class="input-group">
+                        <input class="form-control" aria-label="Text input with multiple buttons"
+                            ng-model="vm.currentObject">
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" ng-click="vm.validateAndAdd()">
+                                <span class="glyphicon glyphicon-ok"></span> {{ vm.buttons.add }}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div clas="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default" style="margin: 10px 0px"
+                        ng-repeat="object in vm.objects track by $index">
+                        <div class="panel-heading">{{ object.type }} </div>
+                        <div class="panel-body">
+                            <p>{{ object.name }}</p>
+                            <button type="button" class="btn btn-default" ng-click="vm.deleteObj(object)">
+                                <span class="glyphicon glyphicon-remove"></span> {{ vm.buttons.delete }}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="./app.js"></script>
+</body>
+
+</html>
