@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en" ng-app="firstAngularApp">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>AngularJs App</title>
+    <meta name="description" content="WalkThroughCode angularjs app">
+    <meta name="author" content="Lucas Mendonça Dias">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body ng-controller="mainCtrl as vm">
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1>List of posts</h1>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <input type="text" class="form-control" ng-model="vm.search" placeholder="Search posts">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">Search</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6" ng-repeat="post in vm.posts | filter: vm.search">
+                <div class="panel panel-default">
+                    <div class="panel-heading">{{ post.title | trimPostTitle }}</div>
+                    <div class="panel-body">
+                        {{ post.body | trimPostBody }}
+                        <a class="clickable" ng-click="vm.showPost(post)">Read more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="./app.js"></script>
+</body>
+
+</html>
