@@ -55,3 +55,7 @@ A WalkThroughCode's [course](https://www.youtube.com/watch?v=fYv-tGPctGo&list=PL
 
 ### Stack
 - [Angular.js 1.8](https://angularjs.org/)
+
+## /promise-all (October 10th 2021)
+
+A quick practical exercise on promises. This time I'll be focusing on promise.all
