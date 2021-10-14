@@ -1,0 +1,20 @@
+{
+  "name": "promise-all",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest src/test",
+    "start": "node src/main/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.23.0",
+    "colors": "^1.4.0"
+  },
+  "devDependencies": {
+    "jest": "^27.2.5"
+  }
+}
