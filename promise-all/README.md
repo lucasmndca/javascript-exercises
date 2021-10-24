@@ -1,8 +1,8 @@
 ### Promise all
 
 - Run `yarn install`
-- Then run `npm start`
+- Then run `yarn start`
 
 ## Tests
 
-- Run `npm test`
+- Run `yarn test`
